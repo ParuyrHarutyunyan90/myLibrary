@@ -20,11 +20,13 @@
 
 
 <h2 style="color: #2b2b2c">Please Update Author data</h2> <br>
-<form action="/books/edit" method="post">
+<form action="/books/edit" method="post" enctype="multipart/form-data">
     <input type="hidden" name="bookId" value="<%=book.getId()%>">
     <input type="text" name="title" value="<%=book.getTitle()%>"> <br> <br>
     <input type="text" name="description" value="<%=book.getDescription()%>"> <br> <br>
     <input type="number" name="price" value="<%=book.getPrice()%>"> <br>
+    Profile Picture: <br>
+    <input type="file" name="profilePic" value="<%=book.getProfilePic()%>"> <br>
     <select name="authorId">
         <% for (Author author : authors) {
 

@@ -17,12 +17,14 @@
 
 
 <h2 style="color: #2b2b2c">Please input Author data</h2> <br>
-<form action="/authors/edit" method="post">
+<form action="/authors/edit" method="post" enctype="multipart/form-data">
     <input type="hidden" name="authorId" value="<%=author.getId()%>">
     <input type="text" name="name" value="<%=author.getName()%>"> <br> <br>
     <input type="text" name="surname" value="<%=author.getSurname()%>"> <br> <br>
     <input type="email" name="email" value="<%=author.getEmail()%>"> <br> <br>
     <input type="number" name="age" value="<%=author.getAge()%>"> <br>
+    Profile Picture: <br>
+    <input type="file" name="profilePic" value="<%=author.getProfilePic()%>">
     <input type="submit" value="EDIT">
 </form>
 

@@ -16,10 +16,12 @@
 
 
 <h2 style="color: #2b2b2c">Please input Author data</h2> <br>
-<form action="/books/add" method="post">
+<form action="/books/add" method="post" enctype="multipart/form-data">
     <input type="text" name="title" placeholder="Please input book title"> <br> <br>
     <input type="text" name="description" placeholder="Please input book description"> <br> <br>
     <input type="number" name="price" placeholder="Please input book price"> <br>
+    Profile Picture: <br>
+    <input type="file" name="profilePic"> <br>
     <select name="authorId">
         <% for (Author author : authors) { %>
         <option value="<%=author.getId() %>"> <%=author.getName()%> <%=author.getSurname()%>  </option>

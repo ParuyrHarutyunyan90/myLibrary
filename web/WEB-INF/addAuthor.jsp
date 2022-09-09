@@ -12,11 +12,14 @@
 </head>
 <body>
 <h2 style="color: #2b2b2c">Please input Author data</h2> <br>
-<form action="/authors/add" method="post">
+<form action="/authors/add" method="post" enctype="multipart/form-data">
   <input type="text" name="name" placeholder="Please input Author name"> <br> <br>
   <input type="text" name="surname" placeholder="Please input Author surname"> <br> <br>
   <input type="email" name="email" placeholder="Please input Author email"> <br> <br>
   <input type="number" name="age" placeholder="Please input Author age"> <br>
+  Profile Picture: <br>
+  <input type="file" name="profilePic">
+
   <input type="submit" name="ADD">
 </form>
 
